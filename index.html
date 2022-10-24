@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+    user-scalable=no">
+    <title>food-website</title>
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="./asset/font/font-awesome/fontawesome-free-6.0.0-web/css/all.css">
+</head>
+<body>
+    <div class="all-header">
+        <div class="header">
+        
+        
+            <div class="menu-connect">
+                <div class="phin">
+                    <h3>Dave's <span><p>Catering Services</p></span></h4>
+                </div>
+    
+                <div class="menu">
+                    <h4><a href="./index.html">Home</a></h4>
+                    <h4 onclick="getGallery()" id="gallery" style="cursor: pointer;">Gallery</h4>
+                    <h4 id="open2" onclick="viewModel()" style="cursor: pointer;">About Us</h4>
+                    <h4 id="con" onclick="openCon()" style="cursor: pointer;">Contact Us</h4>
+                    
+                </div>
+        
+            
+                <div class="yourAccount">
+                    <p onclick="createAcct()" id="createaccount">Create an account</p>
+                    <p id="createaccountTwo" style="cursor: default;"></p>
+                    <div class="profile">
+                        <img src="./asset/image/avatar.png" alt="" id="photo">
+                        <input type="file" name="" id="file">
+                        <label for="file" id="C">Choose Photo</label>
+                    </div>
+                </div>
+                
+            </div>
+    
+    
+            <div class="menu-connect-mobile">
+    
+                <div class="phins">
+                    <h3>Dave's <span><p>Catering Services</p></span></h3>
+                    <span class="fa-solid fas fa-bars bar" id="bar" onclick="getBar()"></span>
+                    <i class="fa-solid fab fa-x" id="cancel" onclick="getCancel()" style="cursor: pointer;"></i>
+                </div>
+    
+                <div class="another-menu" id="menuMobile">
+                    <div class="menu-mobile">
+                        <h4><a href="./index.html">Home</a></h4>
+                        <h4 style="cursor: pointer;" onclick="getGallery()" id="gallery">Gallery</h4>
+                        <h4 id="open2" onclick="viewModel()" style="cursor: pointer;">About Us</h4>
+                        <h4 id="con" onclick="openCon()" style="cursor: pointer;">Contact Us</h4>
+                        
+                    </div>
+            
+                
+                </div>
+            </div>
+    
+            
+    
+        </div>
+
+        <div class="gallery-side" id="theGallery">
+            <span class="fa-solid fa-x" id="gCancel" onclick="galleryCancel()"></span>
+            <div class="main-scroll-div">
+                <div>
+                    <button class="icon" onclick="scrollL()" id="scrollL"><i class="fa-solid fas fa-angle-double-left"></i></button>
+                </div>
+                <div class="cover">
+                    <div class="scroll-images" id="scrollImg">
+                        <div class="child"><img class="child-img" src="./asset/image/serve.png" alt=""></div>
+                        <div class="child"><img class="child-img" src="./asset/image/serve2.png" alt=""></div>
+                        <div class="child"><img class="child-img" src="./asset/image/food.jpg" alt=""></div>
+                        <div class="child"><img class="child-img" src="./asset/image/serve3.png" alt=""></div>
+                        <div class="child"><img class="child-img" src="./asset/image/serve4.png" alt=""></div>
+                        <div class="child"><img class="child-img" src="./asset/image/serve5.png" alt=""></div>
+                        <div class="child"><img class="child-img" src="./asset/image/serve6.png" alt=""></div>
+                        <div class="child"><img class="child-img" src="./asset/image/serve7.png" alt=""></div>
+                        <div class="child"><img class="child-img" src="./asset/image/serve8.png" alt=""></div>
+                        <div class="child"><img class="child-img" src="./asset/image/serve9.png" alt=""></div>
+                        <div class="child"><img class="child-img" src="./asset/image/serve10.png" alt=""></div>
+                        <div class="child"><img class="child-img" src="./asset/image/serve11.png" alt=""></div>
+                        <div class="child"><img class="child-img" src="./asset/image/serve12.png" alt=""></div>
+                        <div class="child"><img class="child-img" src="./asset/image/serve13.png" alt=""></div>
+                        <div class="child"><img class="child-img" src="./asset/image/serve14.png" alt=""></div>
+                        <div class="child"><img class="child-img" src="./asset/image/serve15.png" alt=""></div>
+                        <div class="child"><img class="child-img" src="./asset/image/serve16.png" alt=""></div>
+                    </div>
+                </div>
+                <div>
+                    <button class="icon" onclick="scrollR()" id="scrollR"><i class="fa-solid fas fa-angle-double-right"></i></button>
+                </div>
+            </div>
+
+            <h1 class="gallery-h1">Check out our delicacies in our gallery</h1>
+        </div>
+       
+        <header>
+            <div class="dashed">
+                <div class="dash"></div>
+                <h1>Professional Catering <br>Services</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum<br> culpa voluptates sed  labore cumque placeat nemo dolorum </p>
+                
+
+                <div class="connect ">
+                    
+                    <h4 class="order" style="cursor: pointer;"><a href="#order" onclick="ordering()" style="color: white;">ORDER</a>
+                    </h4>
+                </div>
+            </div>
+    
+            <div class="food">
+                <img src="./asset/image/food.png" alt="" id="food">
+            </div>
+    
+    
+            
+            
+        </header>
+    </div>
+
+    <div class="contacting" id="contacting">
+        <span class="fa-solid fa-x" id="conCancel" onclick="contactCancel()"></span>
+        <div class="contact-connect">
+            <div class="contact-box contact-online">
+                <span class="fa-solid fa-user"></span>
+                <p>24 hours services</p>
+                <h3>Online Appointment</h3>
+                <p>Get all time an support for any project.We will be pleased to get your connection</p>
+        
+            </div>
+            <div class="contact-box contact-working">
+                <span class="fa-solid fa-clock"></span>
+                <p>Time and plans</p>
+                <h3>Time and Days</h3>
+                <p>Conect with us every day from monday to sunday.. and time is from 7am-7pm</p>
+        
+            </div>
+        
+            <div class="contact-box contact-call">
+                <span class="fa-solid fa-headset"></span>
+                <p>Calls and Email</p>
+                <h3>Call us on / Email</h3>
+                <p><a href="tel:+2348105664149">+234 810 0566 4149</a></p>
+                <p><a href="mailto:Nnajidavid58@gmail.com">Nnajidavid58@gmail.com</a></p>
+        
+            </div>
+        </div>
+    </div>
+
+    <div class="logIn">
+        <div class="modal-container" id="modal">
+            <div class="modal">
+                <button class="close-btn" id="close" onclick="closed()">
+                    <i class="fa fa-times"></i>
+                </button>
+                <div class="modal-header">
+                    <h3>Sign Up</h3>
+                </div>
+                <div class="modal-content">
+                    <p>Register with us to get offers, support and more</p>
+                    <form class="modal-form" name="theForm" onsubmit="submitForm()" id="modelForm" method="dialog">
+                        <div>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Enter Name" class="form-input" required name="formName" />
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email"  placeholder="Enter Email" class="form-input" required  name="formEmail"/>
+                        </div>
+                        <div>
+                            <label for="password">Password</label>
+                            <input type="password" placeholder="Enter Password" class="form-input" required name="formPass"/>
+                        </div>
+                        
+                        <input type="submit" value="Submit" class="submit-btn" id="sub" name="formSub"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="about-us">
+        <div class="content-two-display" id="allDeContent">
+        
+            <div class="content-two">
+                <span id="closeTwo" onclick="hideContent()">X</span>
+                <div class="content2">
+                    
+                    <div class="text">
+
+                        <h1 class="h1">About Us</h1>
+                        
+                        <div class="img">
+                            <img src="./asset/image/serve8.png" alt="">
+                            <h1>Dave's Catering Services</h1>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, in? Similique sapiente iste modi delectus consequatur, ipsum fugiat aliquid quam temporibus quod atque optio, dolor autem recusandae odio aut fugit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quisquam pariatur rerum inventore voluptatibus saepe quis sapiente iste </p>
+                        
+                    </div>
+                   
+                </div>
+            </div>
+        </div> 
+    </div>
+    <div class="border"></div>
+
+    <div class="gallery">
+        <h1>Our Gallery</h1>
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+    
+                <div class="slide first">
+                    <img src="./asset/image/serve3.png" alt="">
+                   
+                </div>
+                <div class="slide">
+                    <img src="./asset/image/serve4.png" alt="">
+                   
+                </div>
+    
+                <div class="slide">
+                    <img src="./asset/image/serve6.png" alt="">
+                    
+                </div>
+    
+                <div class="slide">
+                    <img src="./asset/image/serve7.png" alt="">
+                    
+                </div>
+    
+                <div class="slide">
+                    <img src="./asset/image/serve8.png" alt="">
+                </div>
+
+                
+    
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                    <div class="auto-btn5"></div>
+                    
+                </div>
+            </div>
+    
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+                
+            </div>
+        </div>
+
+    </div>
+    <div class="border"></div>
+
+    <div class="contact-container">
+        <div class="contactinfo">
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-map-marker"></i></div>
+                <div class="text">
+                    <h3>Address</h3>
+                    <p>Awka, Anambra state, Nigeria.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="text">
+                    <h3>Phone</h3>
+                    <p><a href="tel:+2348105664149">810-566-4149</a></p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="text">
+                    <h3>Email</h3>
+                    <p><a href="mailto:Nnajidavid58@gmail.com">Nnajidavid58@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="contactform" id="formingSheet">
+            <a name="order"></a>
+            <form name="myForm" method="dialog" onsubmit="validateForm()">
+                <h2 style="color: black;">Make Order Now</h2>
+                <div class="inputbox">
+                    <input type="text" name="fName"  maxlength="25" value="">
+                    <span id="notEmpty">Full Name</span>
+                </div>
+            
+                <div class="inputbox">
+                    <input type="text" name="fDetail"  maxlength="100" value="">
+                    <span id="notEmpty2">Your detail <i style="color: rgb(201, 147, 147); font-size: 12px;">(e.g.. phone , location.)</i></span>
+                </div>
+            
+                <div class="inputbox">
+                    <select  name="fOpt">
+                        <option value="" selected></option>
+                        <option value="">Egusi Soup and Pounded yam</option>
+                        <option value="">Ice cream</option>
+                        <option value="">Burger </option>
+                        <option value="">Rice and stew</option>
+                        <option value="">Fried Rice & chicken</option>
+                        <option value="">Milky popCorn</option>
+                        <option value="">Jellof Rice with salad</option>
+                        <option value="">Yam and egg sauce</option>
+                        <option value="">Pizza</option>
+                        <option value="">Fried chicken</option>
+                        <option value="">Fruit salad</option>
+                        <option value="">Fried turkey</option>
+                        <option value="">Pork meat</option>
+                        <option value="">Goat meat</option>
+                        
+                    </select>
+                   
+                    <span id="notEmpty3">Select your order...</span>
+                    
+                </div>
+
+                <div class="inputbox">
+                    <textarea name="fText" style="font-family: bold-small;"></textarea>
+                    
+                    <span id="notEmpty4">Describe more on your order </span>
+                </div>
+            
+                <div class="inputbox">
+                    <input type="Submit" name="fSubmit" value="Send" onclick="return submitted()" class="send" id="send">
+            
+                </div>
+            </form>
+            
+
+            
+        </div>
+
+        <div class="confirmed-order" id="confirmOrder">
+            <a href="./index.html"><i class="fa-solid fa-x ex" onclick="ex()"></i></a>
+            <span class="fa-solid far fa-check-circle circle"></span>
+            <p id="thankyou" style="color: white;" ></p>
+            <h1 style="color: white;">Thank you</h1>
+        </div>
+    </div>
+    
+
+    <div class="border"></div>
+    
+    <footer>
+    
+    
+    
+        <div class="footer">
+            <div class="footer1">
+                <div class="join">
+                    <h3>Dave's cs</h3>
+    
+                </div>
+                <p>Experience a great time enjoying nature and vintage life style.</p>
+            </div>
+    
+            <div class="footer2">
+                <div class="footer-home">
+                    <h4>Home</h4>
+                    <a href="">How it works</a>
+                    <a href="">Sell</a>
+                    <a href="">About Us</a>
+                    <a href="">How it works</a>
+                    <a href="">Contact</a>
+                </div>
+    
+            </div>
+    
+        </div>
+    
+        <div class="social-footer">
+            <div class="socio-footer">
+                <a href=""><span class="fa-brands fa-facebook"></span></a>
+                <a href=""><span class="fa-brands fa-twitter"></span></a>
+                <a href=""><span class="fa-brands fa-linkedin-in"></span></a>
+                <a href=""><span class="fa-brands fa-instagram"></span></a>
+            </div>
+            <p>Copyright © Dave's_cs 2022 Limited</p>
+        </div>
+    </footer>
+    
+
+    <script src="./asset/javascript/main.js"></script>
+</body>
+</html>
