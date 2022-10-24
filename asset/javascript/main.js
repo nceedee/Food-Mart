@@ -23,7 +23,15 @@ function getCancel() {
   }
 }
 
+let counter = 1;
+setInterval(function () {
+  document.getElementById("radio" + counter).checked = true;
+  counter++;
 
+  if (counter > 5) {
+    counter = 1;
+  }
+}, 3000);
 
 
 
@@ -196,6 +204,9 @@ function validateForm() {
 }
 
 
+
+
+
 function ex()
 {
   if ( confirmOrder )
@@ -239,4 +250,26 @@ function submitForm()
 
 }
 
+
+const imgDiv = document.querySelector(".profile");
+
+const img = document.querySelector("#photo");
+
+const file = document.querySelector("#file");
+
+const uploadBtn = document.querySelector("#uploadBtn");
+
+file.addEventListener("change", function () {
+  const chooseFile = this.files[0];
+
+  if (chooseFile) {
+    const reader = new FileReader();
+
+    reader.addEventListener("load", function () {
+      img.setAttribute("src", reader.result);
+    });
+
+    reader.readAsDataURL(chooseFile);
+  }
+});
 
